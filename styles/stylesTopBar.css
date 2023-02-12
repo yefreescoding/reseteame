@@ -1,0 +1,97 @@
+.topInfo-div {
+  display: flex;
+  flex: 3;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 80px;
+}
+
+.logoDiv {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 10px;
+}
+
+h1 {
+  display: flex;
+  justify-content: first baseline;
+}
+
+.leanna {
+  align-self: flex-end;
+  font-family: 'Sassy Frass', cursive;
+  font-size: 80px;
+  margin-left: -50px;
+  
+}
+
+.infoDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 1;
+}
+
+.topTextLink {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 40px;
+  flex-shrink: 1;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.topTextLink:hover {
+  color: violet;
+  text-decoration: underline;
+  transform: translate(2px, -3px);
+}
+
+.infoButton {
+  flex-shrink: 1;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  margin: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.logIn {
+  padding: 20px 30px 20px 30px;
+  background-color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.logIn:hover {
+  background-color: rgba(215, 95, 215, 0.623);
+  color: white;
+  border-radius: 16px;
+  font-size: 17px;
+  transform: scale(1, 1);
+}
+
+.signUp {
+  background-color: rgba(160, 65, 160, 0.785);
+  color: white;
+  font-size: large;
+  border: none;
+  border-radius: 16px;
+  padding: 20px 30px 20px 30px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.signUp:hover {
+  background-color: rgba(215, 95, 215, 0.623);
+  transform: translate(0px, -2px);
+  box-shadow:  3px 6px 10px #c1c1c18f
+}
