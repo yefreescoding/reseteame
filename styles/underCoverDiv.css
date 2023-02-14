@@ -1,0 +1,54 @@
+.secondDiv {
+  background-color: white;
+  margin-top: 100px;
+}
+
+
+.sub {
+  text-align: left;
+  margin-right: 36%;
+}
+
+.titleSubCover {
+  font-size: 40px;
+}
+
+.clearText {
+  color: grey;
+}
+
+.under {
+  font-size: 30px;
+}
+
+.descriptionInfo2 {
+  font-weight: bold;
+  font-size: 27px;
+  color: rgba(87, 87, 87, 0.87);
+}
+
+.listaLinks {
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+li {
+  margin: 16px;
+}
+
+a {
+  color: rgb(167, 167, 167);
+  text-decoration: nones;
+}
+
+.underImg {
+  border: none;
+  width: 380px;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 8px 5px 14px rgba(105, 105, 105, 0.687);
+  margin-right: 80px;
+}
