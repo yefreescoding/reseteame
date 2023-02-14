@@ -9,7 +9,8 @@
   margin-right: 36%;
 }
 
-.titleSubCover {
+.secondDiv.titleSubCover {
+  margin-top: 0;
   font-size: 40px;
 }
 
@@ -39,14 +40,21 @@ li {
   margin: 16px;
 }
 
-a {
+.exeLinks {
   color: rgb(167, 167, 167);
-  text-decoration: nones;
+  text-decoration: none;
 }
+
+.exeLinks:hover {
+  text-decoration: underline;
+  color: violet;
+}
+
+
 
 .underImg {
   border: none;
-  width: 380px;
+  width: 410px;
   height: auto;
   border-radius: 30px;
   box-shadow: 8px 5px 14px rgba(105, 105, 105, 0.687);
