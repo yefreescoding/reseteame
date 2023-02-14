@@ -1,0 +1,89 @@
+.mainCoverDiv {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+.coverInfoDiv {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 20px;
+  padding: 60px;
+}
+
+.titleCover {
+  color: rgb(210, 210, 210);
+  font-size: 60px;
+  justify-self: flex-start;
+  margin: 0px;
+}
+
+.descriptionInfo {
+  font-size: 27px;
+  color: rgba(182, 182, 182, 0.87);
+}
+
+.buttonsCover {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttonCover {
+  border: none;
+  font-size: 17px;
+  padding: 17px 18px; 
+  border-radius: 16px;
+}
+
+.plans {
+  border: 3px solid rgb(153, 63, 153);
+  background-color: rgb(153, 63, 153);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.plans:hover {
+  border: none;
+  border: 3px solid rgb(255, 161, 255);
+}
+
+.plans:active {
+  border: 3px solid rgb(252, 185, 252);
+  box-shadow: -1px -1px 10px rgba(253, 129, 253, 0.8);
+}
+
+.free {
+  background-color: rgb(21, 21, 21);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.free:hover {
+  transform: scale(1.03, 1.03);
+  box-shadow: -0.5px -0.5px 6px rgba(253, 129, 253, 0.58);
+}
+
+.subDescription {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+.coverImgDiv {
+  flex-shrink: 1;
+  padding: 20px;
+  height: auto;
+  margin-right: 40px;
+}
+
+.coverImg {
+  width: 540px;
+  height: auto;
+  border-radius: 16px;
+}

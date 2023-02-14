@@ -4,23 +4,25 @@
   flex-flow: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 6px;
   margin-top: 0;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .logoDiv {
+  color: rgb(210, 210, 210);
   display: flex;
   justify-content: flex-start;
   font-size: 10px;
 }
 
-h1 {
+.textLogo {
   display: flex;
   justify-content: first baseline;
 }
 
 .leanna {
+  color: rgb(239, 84, 239);
   align-self: flex-end;
   font-family: 'Sassy Frass', cursive;
   font-size: 80px;
@@ -35,7 +37,8 @@ h1 {
 }
 
 .topTextLink {
-  font-size: 14px;
+  color: rgb(213, 213, 213);
+  font-size: 12px;
   font-weight: 600;
   margin: 40px;
   flex-shrink: 1;
@@ -46,7 +49,7 @@ h1 {
 .topTextLink:hover {
   color: violet;
   text-decoration: underline;
-  transform: translate(2px, -3px);
+  transform: scale(2, 2);
 }
 
 .infoButton {
@@ -63,8 +66,9 @@ button {
 }
 
 .logIn {
-  padding: 20px 30px 20px 30px;
-  background-color: white;
+  padding: 16px 26px 16px 26px;
+  color: white;
+  background-color: rgb(21, 21, 21);
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -72,26 +76,24 @@ button {
 }
 
 .logIn:hover {
-  background-color: rgba(215, 95, 215, 0.623);
-  color: white;
-  border-radius: 16px;
-  font-size: 17px;
-  transform: scale(1, 1);
+  transform: scale(1.03, 1.03);
+  box-shadow: -0.5px -0.5px 6px rgba(253, 129, 253, 0.58);
 }
 
 .signUp {
-  background-color: rgba(160, 65, 160, 0.785);
+  background-color: rgba(203, 80, 203, 0.785);
   color: white;
-  font-size: large;
+  font-size: 14px;
   border: none;
   border-radius: 16px;
-  padding: 20px 30px 20px 30px;
+  padding: 16px 26px 16px 26px;
   cursor: pointer;
   transition: all 0.25s;
 }
 
 .signUp:hover {
-  background-color: rgba(215, 95, 215, 0.623);
-  transform: translate(0px, -2px);
-  box-shadow:  3px 6px 10px #c1c1c18f
+  color: black;
+  background-color: rgb(245, 197, 245);
+  border: solid 1px rgba(203, 80, 203, 0.785);
+  transform: scale(1.15, 1.15);
 }
