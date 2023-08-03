@@ -17,12 +17,6 @@ const navLinks = [
     href: '/',
   },
 ];
-
-interface Props {
-  open?: boolean;
-}
-
-const { open } = Astro.props;
 ---
 
 <header
@@ -56,15 +50,17 @@ const { open } = Astro.props;
     </div>
     <div class="z-10 flex flex-col gap-4 md:flex-row">
       <a
-        href=""
+        href="https://www.buymeacoffee.com/yefree13saX"
         class="w-fit flex gap-2 items-center border rounded-lg px-4 py-2 bg-gray-200 hover:bg-gray-400"
+        target="_blank"
       >
         <img src="/icons/coffee-cup.svg" alt="" /><span>Buy me a coffee</span
         ></a
       >
       <a
-        href=""
+        href="https://github.com/yefreescoding/reseteame"
         class="w-fit flex gap-2 items-center border border-gray-600 rounded-lg px-4 py-2 bg-gray-400 shadow-inner"
+        target="_blank"
       >
         <img src="/icons/github.svg" alt="" /><span>Source code</span></a
       >
