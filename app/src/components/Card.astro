@@ -1,0 +1,20 @@
+---
+---
+
+<article class="card" data-tilt>
+  <h2 class="card__h2">Testing</h2>
+</article>
+<style lang="scss">
+  @use '../styless/utils/functions' as *;
+
+  .card {
+    background-color: red;
+    &__h2 {
+      display: block;
+      width: toRem(150);
+      aspect-ratio: 1;
+      margin: auto;
+    }
+  }
+</style>
+<script src="../vanilla-tilt/scripts.js"></script>

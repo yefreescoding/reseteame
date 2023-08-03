@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  author?: string;
+  opengraph?: string;
+  favicon?: string;
+}
+
+const {
+  title,
+  description,
+  author = 'Yefree Valdez',
+  opengraph = '/',
+  favicon = '',
+} = Astro.props;
+---
+
+<!-- Basic Meta Tags -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- SEO Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content="keyword1, keyword2, keyword3" />
+<!-- Add relevant keywords related to your website -->
+<meta name="author" content={author} />
+<!-- Open Graph / Facebook Meta Tags -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content="path/to/your/image.jpg" />
+<!-- URL to the image you want to show when shared on Facebook -->
+<meta property="og:url" content={opengraph} />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content={opengraph} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={opengraph} />
+<!-- URL to the image you want to show when shared on Twitter -->
+<!-- Favicon -->
+<link rel="icon" href={favicon} type="image/x-icon" />
