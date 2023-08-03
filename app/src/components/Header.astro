@@ -1,0 +1,123 @@
+---
+const navLinks = [
+  {
+    name: 'showcase',
+    href: '/',
+  },
+  {
+    name: 'resets',
+    href: '/',
+  },
+  {
+    name: 'readme',
+    href: '/',
+  },
+  {
+    name: 'portfolio',
+    href: '/',
+  },
+];
+
+interface Props {
+  open?: boolean;
+}
+
+const { open } = Astro.props;
+---
+
+<header
+  id="header"
+  class="flex relative p-4 gap-8 items-center justify-between md:justify-start"
+>
+  <div class="z-10 flex items-center">
+    <span class="text-xl font-bold uppercase">Resets</span>
+    <img
+      src="/icons/resets.svg"
+      alt=""
+      class="w-[2rem] h-[2rem] aspect-square"
+    />
+  </div>
+  <nav
+    id="nav"
+    data-visible="false"
+    class="header__nav md:flex-1 justify-between md:items-center"
+  >
+    <div class="flex flex-col md:flex-row gap-4">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-xl md:text-base capitalize hover:underline hover:underline-offset-8 hover:decoration-2 "
+          >
+            {link.name}
+          </a>
+        ))
+      }
+    </div>
+    <div class="z-10 flex flex-col gap-4 md:flex-row">
+      <a
+        href=""
+        class="w-fit flex gap-2 items-center border rounded-lg px-4 py-2 bg-gray-200 hover:bg-gray-400"
+      >
+        <img src="/icons/coffee-cup.svg" alt="" /><span>Buy me a coffee</span
+        ></a
+      >
+      <a
+        href=""
+        class="w-fit flex gap-2 items-center border border-gray-600 rounded-lg px-4 py-2 bg-gray-400 shadow-inner"
+      >
+        <img src="/icons/github.svg" alt="" /><span>Source code</span></a
+      >
+    </div>
+  </nav>
+  <div class="lg:hidden z-10">
+    <button id="menu-toggle" class="w-[2rem]">
+      <img src="/icons/menu.svg" alt="" class="w-full" />
+    </button>
+  </div>
+</header>
+
+<style lang="scss" is:global>
+  .header__nav {
+    display: flex;
+    gap: 1rem;
+    @media (width < 48em) {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      flex-direction: column;
+      padding: 10vh 1rem;
+      height: fit-content;
+      // transitiosn
+      transition: all 0.24s ease;
+      opacity: 0;
+      transform: translateX(-100%);
+      &[data-visible='true'] {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+  body[data-visible='true'] {
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navBar = document.getElementById('nav');
+
+  console.log(document.body.getAttribute('data-visible'));
+
+  menuToggle.addEventListener('click', () => {
+    const visibility = navBar.getAttribute('data-visible');
+    console.log(visibility);
+    if (visibility === 'false') {
+      navBar.setAttribute('data-visible', 'true');
+      document.body.setAttribute('data-visible', 'true');
+    } else {
+      navBar.setAttribute('data-visible', 'false');
+      document.body.setAttribute('data-visible', 'false');
+    }
+  });
+</script>
