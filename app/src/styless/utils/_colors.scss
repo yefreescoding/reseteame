@@ -1,0 +1,17 @@
+:root {
+  --clr-bg: hsl(312, 42%, 95%);
+  --clr-text: #111;
+  @media (prefers-color-scheme: dark) {
+    --clr-bg: hsl(263, 82%, 4%);
+    --clr-text: hsl(0, 0%, 90%);
+  }
+}
+
+html {
+  color-scheme: light dark;
+}
+
+.main {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+}

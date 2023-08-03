@@ -1,4 +1,6 @@
 ---
+// import components
+import Links from './Links.astro';
 const navLinks = [
   {
     name: 'showcase',
@@ -21,7 +23,7 @@ const navLinks = [
 
 <header
   id="header"
-  class="flex relative p-4 gap-8 items-center justify-between md:justify-start"
+  class="flex relative p-4 gap-8 items-center justify-between md:justify-start border-b-[0.5px] border-gray-400"
 >
   <div class="z-10 flex items-center">
     <span class="text-xl font-bold uppercase">Resets</span>
@@ -49,21 +51,20 @@ const navLinks = [
       }
     </div>
     <div class="z-10 flex flex-col gap-4 md:flex-row">
-      <a
+      <Links
+        text="Buy me a coffee"
         href="https://www.buymeacoffee.com/yefree13saX"
-        class="w-fit flex gap-2 items-center border rounded-lg px-4 py-2 bg-gray-200 hover:bg-gray-400"
-        target="_blank"
-      >
-        <img src="/icons/coffee-cup.svg" alt="" /><span>Buy me a coffee</span
-        ></a
-      >
-      <a
+        svg={true}
+        img="/icons/coffee-cup.svg"
+        isFilled={true}
+        style="secondary"
+      />
+      <Links
+        text="Source code"
         href="https://github.com/yefreescoding/reseteame"
-        class="w-fit flex gap-2 items-center border border-gray-600 rounded-lg px-4 py-2 bg-gray-400 shadow-inner"
-        target="_blank"
-      >
-        <img src="/icons/github.svg" alt="" /><span>Source code</span></a
-      >
+        svg={true}
+        img="/icons/github.svg"
+      />
     </div>
   </nav>
   <div class="lg:hidden z-10">

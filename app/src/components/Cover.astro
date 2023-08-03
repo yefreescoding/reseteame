@@ -1,23 +1,56 @@
 ---
+import Links from './Links.astro';
 ---
 
-<section class="cover">
-  <a href="/">Build by Yefree 🤓</a>
-  <h1>
-    <span>RESETEAME</span>
-    <span>Let't start with the right foot</span>
-  </h1>
-  <p>
-    These powerful resources serve as a one-stop solution for kickstarting your
-    web projects with ease and efficiency. Whether you're a seasoned developer
-    or just starting, these tools will help you get your projects up and running
-    in no time.
-  </p>
-  <div>
-    <div>
-      <a href="/">ok! Give me the thing!</a>
-      <a href="#">umm, Not really sure yet</a>
-    </div>
-    <p>If it's good. You have to share it <a href="/">twitter link</a></p>
+<section class="cover flex flex-col items-center justify-center gap-8">
+  <a
+    href="/"
+    class="border border-indigo-500 rounded-full px-4 py-[5px] bg-indigo-500/20 text-sm text-gray-700 hover:bg-indigo-500/50 dark:text-gray-200 transition-all"
+    >Build by Yefree 🤓</a
+  >
+  <div class="text-center mb-4 p-8 w-full md:w-[90ch]">
+    <h1 class="cover__h1 mb-12">
+      <span>RESETÉAME</span>
+      <span class="block text-xl md:text-3xl">start with the right foot</span>
+    </h1>
+    <p>
+      <strong>These powerful resources</strong> serve as a one-stop solution for
+      kickstarting your web projects with ease and efficiency. Whether you're a seasoned
+      developer or just starting, these tools will help you get your projects up
+      and running in no time.
+    </p>
   </div>
+  <div class="text-center">
+    <div class="flex flex-col gap-4 md:flex-row mb-4">
+      <Links
+        text="OK, give me thing!"
+        href="/"
+        isFilled={true}
+        style="principal"
+      />
+      <Links text="Umm, I'm not sure yet." href="/" />
+    </div>
+    <p>
+      If it's good. You have to share it <a
+        href="/"
+        class="underline underline-offset-4">Xshare it!</a
+      >
+    </p>
+  </div>
+
+  <style lang="scss">
+    @use '../styless/utils/functions' as *;
+    .cover {
+      min-height: 90dvh;
+      &__h1 {
+        font-size: clamp(toRem(48), 5vw, toRem(84));
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 1;
+        background: -webkit-linear-gradient(45deg, hsl(275, 67%, 59%), #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  </style>
 </section>
