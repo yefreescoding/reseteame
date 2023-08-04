@@ -1,33 +1,34 @@
 ---
 interface Props {
-  img: string;
   title: string;
   text: string;
 }
 
-const { img, title, text } = Astro.props;
+const { title, text } = Astro.props;
 ---
 
-<a href="">
-  <article class="card" data-tilt>
-    <img src="Showcase" alt="Attribute showcase" />
-    <div>
-      <h2 class="card__h2">Testing</h2>
-      <p></p>
-    </div>
-  </article>
-</a>
+<article class="card">
+  <slot />
+  <div>
+    <h2 class="card__h2">{title}</h2>
+    <p>{text}</p>
+  </div>
+</article>
 
 <style lang="scss">
   @use '../styless/utils/functions' as *;
 
   .card {
-    background-color: red;
+    background-color: var(--clr-bg);
+    box-shadow: 0 0 1px var(--clr-text);
+    border-radius: 10px;
+    & div {
+      padding: 1rem 1.5rem;
+    }
     &__h2 {
-      display: block;
-      width: toRem(150);
-      aspect-ratio: 1;
-      margin: auto;
+      margin-bottom: 0.5rem;
+      font-size: clamp(toRem(22), 3vw, toRem(30));
+      font-weight: 600;
     }
   }
 </style>

@@ -1,14 +1,18 @@
 ---
+import Card from './Card.astro';
+import CardImages from './CardImages.astro';
 ---
 
 <section id="showcase" class="h-fit my-[10vh] rounded-lg">
-  <h2 class="text-center w-full bottom-10 text-3xl font-bold mb-8">
-    <spa>What's RESETÉAME exactly?</spa>
-    <span class="text-xl font-base text-gray-400"
-      >Everything you need to know about this files.</span
+  <header
+    class="gap-4 text-center justify-center items-center flex flex-col md:flex-row w-full bottom-10 text-xl md:text-3xl font-bold mb-8"
+  >
+    <h2>What's RESETÉAME exactly?</h2>
+    <span class="text-lg md:text-xl font-base text-gray-600"
+      >____Everything you need to know about this files.</span
     >
-  </h2>
-  <div class="showcase">
+  </header>
+  <div class="showcase" aria-hidden="false">
     <picture class="shadow-lg w-full object-cover">
       <source
         srcset="/images/cover-dark.webp"
@@ -25,19 +29,53 @@
       />
     </picture>
   </div>
+  <div class="grid md:grid-cols-3 gap-4">
+    <Card
+      title="Better reader expierence"
+      text="Make it easy for the people that come to your site read the content in it."
+    >
+      <CardImages />
+    </Card>
+    <Card
+      title="Resets"
+      text="Updated resets with the latest built in accesibility"
+    />
+    <Card
+      title="Resets"
+      text="Updated resets with the latest built in accesibility"
+    />
+  </div>
 </section>
 
 <style lang="scss">
   .showcase {
     position: relative;
     isolation: isolate;
+    margin-bottom: 10vh;
+  }
+
+  .showcase[aria-hidden='true'] {
+    // animations
+    animation-duration: 3s;
+    animation-name: wakeUp;
+    // animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transform-style: preserve-3d;
+  }
+
+  .showcase img {
+    @media (width < 40em) {
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: left;
+    }
   }
 
   .showcase::after {
     content: '';
     position: absolute;
     inset: 0px;
-    border-radius: 1rem;
+    border-radius: 10px;
     outline: 0.5px solid hsl(0, 0%, 50%);
     background: linear-gradient(
       45deg,
@@ -46,5 +84,28 @@
     );
     z-index: -1;
   }
+
+  @keyframes wakeUp {
+    from {
+      transform: rotateX(45deg);
+      opacity: 0;
+    }
+
+    to {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
 </style>
-<script src="../vanilla-tilt/scripts.js"></script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.setAttribute('aria-hidden', 'true');
+      }
+    });
+  });
+
+  const hiddenItem = document.querySelector('.showcase');
+  observer.observe(hiddenItem);
+</script>

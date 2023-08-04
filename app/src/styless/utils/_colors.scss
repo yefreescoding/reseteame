@@ -1,9 +1,11 @@
 :root {
-  --clr-bg: hsl(312, 3%, 97%);
+  --clr-bg: #f5f5f5;
   --clr-text: #111;
+  --accent: #c3b7d6;
   @media (prefers-color-scheme: dark) {
-    --clr-bg: hsl(263, 82%, 4%);
+    --clr-bg: #000b17;
     --clr-text: hsl(0, 0%, 90%);
+    --accent: #c3b7d6;
   }
 }
 
