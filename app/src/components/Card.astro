@@ -1,9 +1,23 @@
 ---
+interface Props {
+  img: string;
+  title: string;
+  text: string;
+}
+
+const { img, title, text } = Astro.props;
 ---
 
-<article class="card" data-tilt>
-  <h2 class="card__h2">Testing</h2>
-</article>
+<a href="">
+  <article class="card" data-tilt>
+    <img src="Showcase" alt="Attribute showcase" />
+    <div>
+      <h2 class="card__h2">Testing</h2>
+      <p></p>
+    </div>
+  </article>
+</a>
+
 <style lang="scss">
   @use '../styless/utils/functions' as *;
 

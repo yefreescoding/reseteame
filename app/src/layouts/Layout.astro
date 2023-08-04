@@ -1,6 +1,8 @@
 ---
 // import components
 import MetaTags from '../components/MetaTags.astro';
+import Header from '../components/Header.astro';
+
 interface Props {
   title: string;
 }
@@ -16,8 +18,11 @@ import '../styless/index.scss';
     <MetaTags title={title} description="Best resets of the web right now." />
   </head>
   <body data-visible="false">
-    <main class="main">
-      <slot />
-    </main>
+    <div class="wrapper">
+      <Header />
+      <main class="main">
+        <slot />
+      </main>
+    </div>
   </body>
 </html>

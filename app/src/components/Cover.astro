@@ -2,7 +2,9 @@
 import Links from './Links.astro';
 ---
 
-<section class="cover flex flex-col items-center justify-center gap-8">
+<section
+  class="cover flex flex-col items-center justify-center gap-8 mb-[10vh]"
+>
   <a
     href="/"
     class="border border-indigo-500 rounded-full px-4 py-[5px] bg-indigo-500/20 text-sm text-gray-700 hover:bg-indigo-500/50 dark:text-gray-200 transition-all"
@@ -28,7 +30,7 @@ import Links from './Links.astro';
         isFilled={true}
         style="principal"
       />
-      <Links text="Umm, I'm not sure yet." href="#" />
+      <Links text="Umm, I'm not sure yet." href="#showcase" target={false} />
     </div>
     <p>
       If it's good. You have to share it <a
@@ -37,20 +39,19 @@ import Links from './Links.astro';
       >
     </p>
   </div>
-
-  <style lang="scss">
-    @use '../styless/utils/functions' as *;
-    .cover {
-      min-height: 90dvh;
-      &__h1 {
-        font-size: clamp(toRem(48), 5vw, toRem(84));
-        font-weight: 900;
-        text-transform: uppercase;
-        line-height: 1;
-        background: -webkit-linear-gradient(45deg, hsl(275, 67%, 59%), #333);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-  </style>
 </section>
+<style lang="scss">
+  @use '../styless/utils/functions' as *;
+  .cover {
+    min-height: 90dvh;
+    &__h1 {
+      font-size: clamp(toRem(48), 5vw, toRem(84));
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1;
+      background: -webkit-linear-gradient(45deg, hsl(275, 67%, 59%), #333);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+</style>
