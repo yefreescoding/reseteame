@@ -1,0 +1,98 @@
+---
+// import components
+import Card from './Card.astro';
+import Links from './Links.astro';
+
+const tagsCloud = ['Chrome', 'Safari', 'Firefox', 'Brave', 'Opera'];
+---
+
+<section class="section">
+  <h2 class="font-bold text-3xl mb-12">Ready to use anywhere</h2>
+  <div class="section__div">
+    <article class="flex flex-col gap-4 justify-between h-full">
+      <div class="flex gap-4">
+        {
+          tagsCloud.map((tags) => (
+            <span class="bg-gray-400 py-[3px] px-[8px] rounded-full">
+              {tags}
+            </span>
+          ))
+        }
+      </div>
+      <p class="text-xl">
+        Tested in the most browsers popular browser, you don't have to worry
+        about compatibility or responsiveness.
+      </p>
+      <p class="text-xl">
+        There's no doubt this is one of the best solutions when it comes to the
+        struggle of test in different enviorments
+      </p>
+      <Links
+        text="You convince me"
+        href="https://github.com/yefreescoding/reseteame/tree/main/resets"
+        isFilled={true}
+        style="principal"
+      />
+    </article>
+    <div class="section__cards">
+      <Card title="Firefox" text="Latest versions of Chrome" ariaTilt={true}>
+        <img src="/images/chrome.avif" alt="" />
+      </Card>
+      <Card title="Safari" text="Latest versions of Chrome" ariaTilt={true}>
+        <img src="/images/chrome.avif" alt="" />
+      </Card>
+      <Card
+        title="Chrome 16.0.3"
+        text="Latest versions of Chrome"
+        ariaTilt={true}
+      >
+        <img src="/images/chrome.avif" alt="" />
+      </Card>
+    </div>
+  </div>
+</section>
+
+<style lang="scss" is:global>
+  .section {
+    margin: 5rem 0;
+    height: fit-content;
+    &__div {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      align-items: center;
+      justify-content: center;
+      height: fit-content;
+      gap: 1rem;
+
+      & article {
+        flex-basis: 20em;
+        flex-grow: 1;
+      }
+    }
+
+    &__cards {
+      flex-basis: 20em;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      height: 20em;
+      & .card {
+        position: absolute;
+        width: 25rem;
+        @media (width < 40em) {
+          width: 20rem;
+        }
+        @for $i from 1 through 3 {
+          &:nth-child(3n + #{$i}) {
+            transform: rotate(($i * 2.5) + deg);
+            left: ($i * 3) + em;
+            bottom: ($i + 0.5) + 0%;
+          }
+        }
+      }
+    }
+  }
+</style>
+
+<script src="../vanilla-tilt/scripts.js"></script>

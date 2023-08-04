@@ -2,18 +2,35 @@
 interface Props {
   title: string;
   text: string;
+  isAbsolute?: boolean;
+  ariaTilt?: boolean;
 }
 
-const { title, text } = Astro.props;
+const { title, text, ariaTilt = false, isAbsolute = false } = Astro.props;
 ---
 
-<article class="card">
-  <slot />
-  <div>
-    <h2 class="card__h2">{title}</h2>
-    <p>{text}</p>
-  </div>
-</article>
+{
+  ariaTilt && (
+    <article class:list={['card', { absolute: isAbsolute }]} aria-tilt>
+      <slot />
+      <div>
+        <h2 class="card__h2">{title}</h2>
+        <p>{text}</p>
+      </div>
+    </article>
+  )
+}
+{
+  !ariaTilt && (
+    <article class:list={['card', { absolute: isAbsolute }]}>
+      <slot />
+      <div>
+        <h2 class="card__h2">{title}</h2>
+        <p>{text}</p>
+      </div>
+    </article>
+  )
+}
 
 <style lang="scss">
   @use '../styless/utils/functions' as *;
