@@ -52,18 +52,19 @@ import CardImages from './CardImages.astro';
     position: relative;
     isolation: isolate;
     margin-bottom: 10vh;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) perspective(1000px);
+    transition: all 2s ease-in-out;
+    opacity: 0;
   }
 
   .showcase[aria-hidden='true'] {
-    // animations
-    animation-duration: 3s;
-    animation-name: wakeUp;
-    // animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transform-style: preserve-3d;
+    transform: rotateX(0deg);
+    opacity: 1;
   }
 
   .showcase img {
+    transform: translateZ(25px);
     @media (width < 40em) {
       aspect-ratio: 1;
       object-fit: cover;
