@@ -1,4 +1,7 @@
 ---
+// import components
+
+import MenuIcon from './IconMenu.astro';
 interface Props {
   text: string;
   href: string;
@@ -18,7 +21,7 @@ const { text, href, style, isFilled, target = true, svg, img } = Astro.props;
   target={target ? '_blank' : '_self'}
   data-theme={style}
 >
-  {svg && <img src={img} alt="testeo" />}
+  {svg && <slot />}
   {text}
 </a>
 
@@ -49,7 +52,7 @@ const { text, href, style, isFilled, target = true, svg, img } = Astro.props;
     color: hsl(0, 0%, 95%);
   }
   .link_btn.filled[data-theme='secondary'] {
-    background-color: hsl(275, 50%, 80%);
+    background-color: hsl(275, 50%, 90%);
     color: hsl(0, 0%, 16%);
   }
   .link_btn.filled[data-theme='accent'] {

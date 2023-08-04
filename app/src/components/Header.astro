@@ -1,6 +1,11 @@
 ---
 // import components
 import Links from './Links.astro';
+import IconMenu from '../components/IconMenu.astro';
+import IconCoffee from '../components/IconCoffe.astro';
+import IconGithub from '../components/IconGithub.astro';
+// import IconCoffee from './IconCoffee.astro';
+
 const navLinks = [
   {
     name: 'showcase',
@@ -19,6 +24,8 @@ const navLinks = [
     href: '/',
   },
 ];
+
+import menu from '/icons/menu.svg';
 ---
 
 <header
@@ -55,21 +62,27 @@ const navLinks = [
         text="Buy me a coffee"
         href="https://www.buymeacoffee.com/yefree13saX"
         svg={true}
-        img="/icons/coffee-cup.svg"
         isFilled={true}
         style="secondary"
-      />
+      >
+        <IconCoffee />
+      </Links>
       <Links
         text="Source code"
         href="https://github.com/yefreescoding/reseteame"
         svg={true}
         img="/icons/github.svg"
-      />
+      >
+        <IconGithub />
+      </Links>
     </div>
   </nav>
   <div class="lg:hidden z-10">
-    <button id="menu-toggle" class="w-[2rem]">
-      <img src="/icons/menu.svg" alt="" class="w-full" />
+    <button
+      id="menu-toggle"
+      class="w-[2rem] flex items-center p-[5px] rounded-sm dark:bg-indigo-200/50"
+    >
+      <IconMenu />
     </button>
   </div>
 </header>
