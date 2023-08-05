@@ -1,0 +1,162 @@
+<div class="code-editor">
+  <div class="header">
+    <span class="title">JSX</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      class="icon"
+      ><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier">
+        <path
+          stroke-linecap="round"
+          stroke-width="2"
+          stroke="#4C4F5A"
+          d="M6 6L18 18"></path>
+        <path
+          stroke-linecap="round"
+          stroke-width="2"
+          stroke="#4C4F5A"
+          d="M18 6L6 18"></path>
+      </g></svg
+    >
+  </div>
+  <div class="editor-content">
+    <code class="code">
+      <p>
+        <span class="color-0">{'import'}</span>
+        <span class="color-1">{'{ react }'}</span>
+        <span class="color-2">{'from react;'}</span>
+      </p>
+      <p>
+        <span class="color-0">{'import'}</span>
+        <span class="color-1">{'{ resets }'}</span>
+        <span class="color-2">{"from '../resets/';"}</span>
+      </p>
+      <p>
+        <span class="color-0">export default</span>
+        <span class="color-1">function</span>
+        <span class="color-2">{'App {'}</span>
+        <p class="property">
+          <span class="color-2">{'<h1>'}</span>
+          <span class="color">{'Eyy. Look at this!'}</span>
+          <span class="color-2">{'</ h1>'}</span>
+        </p>
+        <p class="property">
+          <span class="color-2">{'<h2>'}</span>
+          <span class="color">{'Works like butter.'}</span>
+          <span class="color-2">{'</ h2>'}</span>
+        </p>
+        <p class="property">
+          <span class="color-2">{'<p>'}</span>
+          <span class="color">{'React, Astro, NextJS'}</span>
+          <span class="color-2">{'</ p>'}</span>
+        </p>
+        <span class="color-2">{'}'}</span>
+      </p>
+    </code>
+  </div>
+
+  <style>
+    .code-editor {
+      max-width: 100%;
+      background-color: var(-clr-bg);
+      box-shadow: 0 0 1px var(--clr-text);
+      border-radius: 10px;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px;
+    }
+
+    .title {
+      font-family: Lato, sans-serif;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 1.57px;
+      color: var(--clr-text);
+    }
+
+    .icon {
+      width: 20px;
+      transition: 0.2s ease;
+    }
+
+    .icon:hover {
+      cursor: pointer;
+      border-radius: 50px;
+      background-color: #6e7281;
+    }
+
+    .editor-content {
+      margin: 0 10px 10px;
+      color: var(--clr-text);
+    }
+
+    .property {
+      margin-left: 30px;
+    }
+
+    .property:hover {
+      cursor: text;
+    }
+
+    .editor-content .color-0 {
+      color: hsl(220, 37%, 48%);
+    }
+
+    .editor-content .color-1 {
+      color: hsl(278, 24%, 73%);
+    }
+
+    .editor-content .color-2 {
+      color: #bc75a8;
+    }
+
+    .editor-content .color-3 {
+      color: rgb(207 146 120);
+    }
+
+    @media (prefers-color-scheme: light) {
+      .editor-content .color-0 {
+        color: #77498d;
+      }
+
+      .editor-content .color-1 {
+        color: #a27d5c;
+      }
+
+      .editor-content .color-2 {
+        color: #8b5099;
+      }
+
+      .editor-content .color-3 {
+        color: rgb(207 146 120);
+      }
+    }
+
+    .color-preview-1,
+    .color-preview-2 {
+      height: 8px;
+      width: 8px;
+      border: 1px solid #fff;
+      display: inline-block;
+      margin-right: 3px;
+    }
+
+    .color-preview-1 {
+      background-color: #1d1e22;
+    }
+
+    .color-preview-1 {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</div>

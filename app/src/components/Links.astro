@@ -30,8 +30,9 @@ const { text, href, style, isFilled, target = true, svg, fit } = Astro.props;
     background-color: transparent;
     padding: 0.5rem 1rem;
     border-radius: 7px;
-    border: 1px solid hsl(0, 0%, 58%);
-    // width: fit-content;
+    box-shadow: 0 0 2px var(--accent);
+    font-weight: 500;
+    transition: all 0.25s;
   }
 
   .link_btn.linkImg {
@@ -40,22 +41,21 @@ const { text, href, style, isFilled, target = true, svg, fit } = Astro.props;
   }
 
   .link_btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1px 3px var(--accent);
     opacity: 0.86;
   }
   .link_btn.filled {
     background-color: hsl(0, 0%, 93%);
     color: hsl(0, 0%, 5%);
-    border: 1px solid hsl(275, 67%, 19%);
   }
 
   .link_btn.filled[data-theme='principal'] {
-    background-color: hsl(275, 77%, 58%);
+    background-color: var(--accent);
     color: hsl(0, 0%, 95%);
   }
   .link_btn.filled[data-theme='secondary'] {
-    background-color: hsl(275, 50%, 90%);
+    background-color: hsl(270, 3%, 88%);
     color: hsl(0, 0%, 16%);
-  }
-  .link_btn.filled[data-theme='accent'] {
   }
 </style>

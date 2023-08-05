@@ -13,19 +13,13 @@ const navLinks = [
   },
   {
     name: 'resets',
-    href: '/',
+    href: 'https://github.com/yefreescoding/reseteame/tree/main/resets',
   },
   {
     name: 'readme',
-    href: '/',
-  },
-  {
-    name: 'portfolio',
-    href: '/',
+    href: 'https://github.com/yefreescoding/reseteame#readme',
   },
 ];
-
-import menu from '/icons/menu.svg';
 ---
 
 <header
@@ -59,7 +53,7 @@ import menu from '/icons/menu.svg';
     </div>
     <div class="z-10 flex flex-col gap-4 md:flex-row">
       <Links
-        text="Gift me a coffee"
+        text="Share a coffee"
         href="https://www.buymeacoffee.com/yefree13saX"
         svg={true}
         isFilled={true}
@@ -71,7 +65,6 @@ import menu from '/icons/menu.svg';
         text="Source code"
         href="https://github.com/yefreescoding/reseteame"
         svg={true}
-        img="/icons/github.svg"
       >
         <IconGithub />
       </Links>
@@ -81,6 +74,7 @@ import menu from '/icons/menu.svg';
     <button
       id="menu-toggle"
       class="w-[2rem] flex items-center p-[5px] rounded-sm dark:bg-indigo-200/50"
+      aria-label="Mobile menu toggle"
     >
       <IconMenu />
     </button>
