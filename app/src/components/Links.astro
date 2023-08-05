@@ -9,14 +9,14 @@ interface Props {
   isFilled?: boolean;
   target?: boolean;
   svg?: boolean;
-  img?: string;
+  fit?: boolean;
 }
 
-const { text, href, style, isFilled, target = true, svg, img } = Astro.props;
+const { text, href, style, isFilled, target = true, svg, fit } = Astro.props;
 ---
 
 <a
-  class:list={['link_btn', { filled: isFilled, linkImg: svg }]}
+  class:list={['link_btn', { filled: isFilled, linkImg: svg, 'w-fit': fit }]}
   href={href}
   target={target ? '_blank' : '_self'}
   data-theme={style}
@@ -31,7 +31,7 @@ const { text, href, style, isFilled, target = true, svg, img } = Astro.props;
     padding: 0.5rem 1rem;
     border-radius: 7px;
     border: 1px solid hsl(0, 0%, 58%);
-    width: fit-content;
+    // width: fit-content;
   }
 
   .link_btn.linkImg {

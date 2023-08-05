@@ -11,7 +11,11 @@ const { title, text, ariaTilt = false, isAbsolute = false } = Astro.props;
 
 {
   ariaTilt && (
-    <article class:list={['card', { absolute: isAbsolute }]} aria-tilt>
+    <article
+      class:list={['card', { absolute: isAbsolute }]}
+      aria-tilt
+      aria-hidden="false"
+    >
       <slot />
       <div>
         <h2 class="card__h2">{title}</h2>
@@ -22,7 +26,10 @@ const { title, text, ariaTilt = false, isAbsolute = false } = Astro.props;
 }
 {
   !ariaTilt && (
-    <article class:list={['card', { absolute: isAbsolute }]}>
+    <article
+      class:list={['card', { absolute: isAbsolute }]}
+      aria-hidden="false"
+    >
       <slot />
       <div>
         <h2 class="card__h2">{title}</h2>

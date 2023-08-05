@@ -1,8 +1,6 @@
 .main {
-  width: min(100% - 1rem, 80em);
+  width: min(100%, 80em);
   margin: 0 auto;
   overflow-x: hidden;
-}
-
-.wrapper {
+  padding: 1rem;
 }
