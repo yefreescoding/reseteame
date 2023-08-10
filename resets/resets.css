@@ -1,24 +1,25 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+  -webkit-text-size-adjust: 100%;
 }
 /*
   Typographic tweaks!
   - Add accessible line-height
   - Improve text rendering
 */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+}
 body {
   line-height: 1.25;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
 }
 img,
 picture,
