@@ -10,9 +10,19 @@ interface Props {
   target?: boolean;
   svg?: boolean;
   fit?: boolean;
+  download?: string;
 }
 
-const { text, href, style, isFilled, target = true, svg, fit } = Astro.props;
+const {
+  text,
+  href,
+  style,
+  isFilled,
+  target = true,
+  svg,
+  fit,
+  download,
+} = Astro.props;
 ---
 
 <a
@@ -20,6 +30,7 @@ const { text, href, style, isFilled, target = true, svg, fit } = Astro.props;
   href={href}
   target={target ? '_blank' : '_self'}
   data-theme={style}
+  download={download}
 >
   {svg && <slot />}
   {text}
