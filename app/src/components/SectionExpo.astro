@@ -19,13 +19,13 @@ import CardImagesReact from './CardImagesReact.astro';
     >
   </header>
   <div class="showcase" aria-hidden="false">
-    <picture class="shadow-lg w-full object-cover">
+    <picture class="w-full object-cover">
       <source
         srcset="/images/covers/cover-dark.jpg"
         media="(prefers-color-scheme: dark)"
       />
       <source
-        srcset="/images/cover.webp"
+        srcset="/images/covers/cover-light.jpg"
         media="(prefers-color-scheme: light)"
       />
       <img
@@ -80,20 +80,6 @@ import CardImagesReact from './CardImagesReact.astro';
       object-fit: cover;
       object-position: left;
     }
-  }
-
-  .showcase::after {
-    content: '';
-    position: absolute;
-    inset: 0px;
-    border-radius: 10px;
-    outline: 0.5px solid hsl(0, 0%, 50%);
-    background: linear-gradient(
-      45deg,
-      hsl(275, 99%, 29%),
-      hsla(246, 89%, 11%, 0.55)
-    );
-    z-index: -1;
   }
 
   @keyframes wakeUp {

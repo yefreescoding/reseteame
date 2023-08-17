@@ -3,7 +3,7 @@ import Links from './Links.astro';
 ---
 
 <section
-  class="cover flex flex-col items-center justify-center gap-8 mb-[10vh] bg-gradient-to-r from-[#fbc2eb] to-[#a6c1ee] dark:from-[#000b17] dark:to-[#72329f] rounded-b-[3rem]"
+  class="cover flex flex-col items-center justify-center gap-8 mb-[10vh] bg-gradient-to-r from-[#fbc2eb] to-[#a6c1ee] dark:from-[#000b17] dark:to-[#72329f] rounded-b-[1rem]"
 >
   <a
     href="https://yefreevaldezdev.vercel.app/"
@@ -11,17 +11,17 @@ import Links from './Links.astro';
     >Build by Yefree 🤓</a
   >
   <div class="text-center mb-4 p-8 w-full md:w-[90ch]">
-    <h1 class="cover__h1 mb-8">
+    <h1 class="cover__h1">
       <span>RESETÉAME</span>
       <span class="block text-xl lg:text-3xl"
         >start your next project with the right foot</span
       >
     </h1>
     <p class="text-lg lg:text-2xl">
-      <strong>These powerful resources</strong> serve as a one-stop solution for
-      kickstarting your web projects with ease and efficiency. Whether you're a seasoned
-      developer or just starting, these tools will help you get your projects up
-      and running in no time.
+      <u class="font-bold">These powerful resources</u> serve as a one-stop solution
+      for kickstarting your web projects with ease and efficiency. Whether you're
+      a seasoned developer or just starting, these tools will help you get your projects
+      up and running in no time.
     </p>
   </div>
   <div class="text-center">
@@ -48,6 +48,7 @@ import Links from './Links.astro';
   .cover {
     min-height: 90dvh;
     &__h1 {
+      margin-bottom: 3rem;
       font-size: clamp(toRem(52), 6vw, toRem(94));
       font-weight: 900;
       text-transform: uppercase;
