@@ -68,12 +68,14 @@ const tagsCloud = [
       height: fit-content;
       gap: 1.5rem;
 
-      & article {
+      & > article {
         flex-basis: 20em;
         flex-grow: 1;
+        padding-right: 1.5rem;
         @media (width < 48em) {
           text-align: center;
           align-items: center;
+          padding: 0;
         }
       }
     }
@@ -84,7 +86,6 @@ const tagsCloud = [
       display: grid;
       place-items: center;
       position: relative;
-      // transform: translateX(-10%);
       height: 20em;
       & .card {
         text-align: left;
