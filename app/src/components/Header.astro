@@ -9,7 +9,7 @@ import IconGithub from '../components/IconGithub.astro';
 const navLinks = [
   {
     name: 'about',
-    href: '/',
+    href: '/about/',
   },
   {
     name: 'resets',
@@ -26,14 +26,14 @@ const navLinks = [
   id="header"
   class="flex relative p-4 gap-8 items-center justify-between md:justify-start border-b-[0.5px] border-gray-400"
 >
-  <div class="z-10 flex items-center">
+  <a href="/" class="z-10 flex items-center">
     <span class="text-xl font-bold uppercase">Resets</span>
     <img
       src="/icons/resets.svg"
       alt=""
       class="w-[2rem] h-[2rem] aspect-square"
     />
-  </div>
+  </a>
   <nav
     id="nav"
     data-visible="false"

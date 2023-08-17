@@ -3,7 +3,7 @@ import Links from './Links.astro';
 ---
 
 <section
-  class="cover flex flex-col items-center justify-center gap-8 mb-[10vh] bg-gradient-to-r from-violet-100 to-blue-300 rounded-b-[3rem]"
+  class="cover flex flex-col items-center justify-center gap-8 mb-[10vh] bg-gradient-to-r from-[#fbc2eb] to-[#a6c1ee] dark:from-[#000b17] dark:to-[#72329f] rounded-b-[3rem]"
 >
   <a
     href="https://yefreevaldezdev.vercel.app/"
@@ -13,9 +13,11 @@ import Links from './Links.astro';
   <div class="text-center mb-4 p-8 w-full md:w-[90ch]">
     <h1 class="cover__h1 mb-8">
       <span>RESETÉAME</span>
-      <span class="block text-xl md:text-3xl">start with the right foot</span>
+      <span class="block text-xl lg:text-3xl"
+        >start your next project with the right foot</span
+      >
     </h1>
-    <p class="text-gray-600 md:text-2xl">
+    <p class="text-lg lg:text-2xl">
       <strong>These powerful resources</strong> serve as a one-stop solution for
       kickstarting your web projects with ease and efficiency. Whether you're a seasoned
       developer or just starting, these tools will help you get your projects up
@@ -26,8 +28,8 @@ import Links from './Links.astro';
     <div class="flex flex-col gap-2 md:flex-row mb-4">
       <Links
         text="OK, give me thing!"
-        href="/resets/resets.css"
-        download="resets.css"
+        href="/resets/resets.zip"
+        download="resets.zip"
         isFilled={true}
         style="principal"
       />
@@ -46,11 +48,15 @@ import Links from './Links.astro';
   .cover {
     min-height: 90dvh;
     &__h1 {
-      font-size: clamp(toRem(52), 6vw, toRem(84));
+      font-size: clamp(toRem(52), 6vw, toRem(94));
       font-weight: 900;
       text-transform: uppercase;
       line-height: 1;
-      background: -webkit-linear-gradient(45deg, hsl(275, 67%, 59%), #333);
+      background: -webkit-linear-gradient(
+        45deg,
+        hsl(275, 67%, 59%),
+        var(--clr-text)
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

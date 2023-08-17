@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Links from '../components/Links.astro';
+---
+
+<Layout title="Ups! page not found">
+  <main class="min-h-[50dvh]">
+    <section
+      class="grid place-items-center p-8 flex flex-col gap-4"
+      aria-labelby="404 error message"
+    >
+      <h1 class="text-center text-2xl md:text-4xl font-extrabold">
+        oH oH! It seems that the page you're trying to get acces to does not
+        exist.
+      </h1>
+      <div>
+        <iframe
+          src="https://giphy.com/embed/9J7tdYltWyXIY"
+          frameborder="0"
+          class="giphy-embed objec-cover w-[280px] h-[290px] md:w-[480px] md:h-[480px]"
+          allowfullscreen></iframe>
+      </div>
+      <div>
+        <Links href="/" text="Go back home" target={false} />
+      </div>
+    </section>
+  </main>
+</Layout>

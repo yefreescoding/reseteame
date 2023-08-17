@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Links from '../components/Links.astro';
+---
+
+<Layout title="About">
+  <main class="min-h-[50dvh]">
+    <section
+      class="grid place-items-center p-8 flex flex-col gap-4"
+      aria-labelby="404 error message"
+    >
+      <h1 class="text-center text-2xl md:text-4xl font-extrabold">
+        Currently building a proper ddcumentation
+      </h1>
+      <div>
+        <iframe
+          src="https://giphy.com/embed/5z0kI6jGLGQXqepswQ"
+          frameborder="0"
+          class="giphy-embed objec-cover w-[280px] h-[290px] md:w-[480px] md:h-[480px]"
+          allowfullscreen></iframe>
+      </div>
+      <div>
+        <Links href="/" text="Go back home" target={false} />
+      </div>
+    </section>
+  </main>
+</Layout>
