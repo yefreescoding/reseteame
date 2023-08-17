@@ -5,7 +5,11 @@ import CardImagesCss from './CardImagesCss.astro';
 import CardImagesReact from './CardImagesReact.astro';
 ---
 
-<section id="showcase" class="h-fit my-[10vh] rounded-lg">
+<section
+  id="showcase"
+  class="h-fit my-[10vh] rounded-lg"
+  aria-labelby="Feautres about the product"
+>
   <header
     class="gap-4 text-center justify-center items-center flex flex-col md:flex-row w-full bottom-10 text-xl md:text-3xl font-bold mb-8"
   >
@@ -17,7 +21,7 @@ import CardImagesReact from './CardImagesReact.astro';
   <div class="showcase" aria-hidden="false">
     <picture class="shadow-lg w-full object-cover">
       <source
-        srcset="/images/cover-dark.webp"
+        srcset="/images/covers/cover-dark.jpg"
         media="(prefers-color-scheme: dark)"
       />
       <source
@@ -25,7 +29,7 @@ import CardImagesReact from './CardImagesReact.astro';
         media="(prefers-color-scheme: light)"
       />
       <img
-        class="w-full object-cover"
+        class="w-full object-cover rounded-2xl"
         src="/images/cover.webp"
         alt="screenshot pagina"
       />
