@@ -1,16 +1,16 @@
 :root {
-  --clr-bg: #f5f5f5;
+  --clr-bg: #e5e2e2;
   --clr-text: hsl(275, 77%, 8%);
   --accent: #0b021b;
-  @media (prefers-color-scheme: dark) {
-    --clr-bg: #000b17;
-    --clr-text: hsl(0, 0%, 90%);
-    --accent: #72329f;
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   --clr-bg: #d9dbdd;
+  //   --clr-text: hsl(0, 0%, 90%);
+  //   --accent: #72329f;
+  // }
 }
 
 html {
-  color-scheme: light dark;
+  // color-scheme: light dark;
 }
 
 .main {

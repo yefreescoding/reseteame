@@ -24,7 +24,7 @@ const navLinks = [
 
 <header
   id="header"
-  class="flex relative p-4 gap-8 items-center justify-between md:justify-start border-b-[0.5px] border-gray-400"
+  class="flex sticky  top-4 mx-4 p-4 gap-8 items-center justify-between md:justify-start border-[0.5px] border-gray-400 bg-[color:var(--clr-bg)] shadow-sm shadow-gray-400/80 rounded-md"
 >
   <a href="/" class="z-10 flex items-center">
     <span class="text-xl font-bold uppercase">Resets</span>
@@ -108,8 +108,8 @@ const navLinks = [
 </style>
 
 <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navBar = document.getElementById('nav');
+  const menuToggle = document.getElementById('menu-toggle') as HTMLElement;
+  const navBar = document.getElementById('nav') as HTMLElement;
 
   console.log(document.body.getAttribute('data-visible'));
 
