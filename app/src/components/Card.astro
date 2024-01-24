@@ -20,10 +20,13 @@ const { title, text, isAbsolute = false } = Astro.props;
   @use '../styless/utils/functions' as *;
 
   .card {
-    background-color: var(--clr-bg);
+    background-color: hsl(0, 0%, 98%);
+    // background-color: var(--clr-bg);
     box-shadow: 0 0 1px var(--clr-text);
-    border-radius: 10px;
+    border-radius: .5rem;
     padding: 0.8rem;
+    border: .5px solid hsl(0, 0%, 70%);
+    box-shadow: 2px 2px 3px hsl(0, 0%, 85%);
 
     &__h2 {
       margin: 0.5rem 0;

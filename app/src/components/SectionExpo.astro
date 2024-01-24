@@ -10,30 +10,22 @@ import CardImagesReact from './CardImagesReact.astro';
   class="h-fit my-[10vh] rounded-lg"
   aria-labelby="Feautres about the product"
 >
-  <header
-    class="gap-4 text-center justify-center items-center flex flex-col md:flex-row w-full bottom-10 text-xl md:text-3xl font-bold mb-8"
-  >
-    <h2>What's RESETÉAME exactly?</h2>
-    <span class="text-lg md:text-xl font-base text-gray-600"
-      >Everything you need to know about this files.</span
-    >
-  </header>
   <div class="showcase" aria-hidden="false">
-    <picture class="w-full object-cover">
-      <source
-        srcset="/images/covers/cover-dark.jpg"
-        media="(prefers-color-scheme: dark)"
-      />
-      <source
-        srcset="/images/covers/cover-light.jpg"
-        media="(prefers-color-scheme: light)"
-      />
+    <header
+      class="gap-4  justify-center  flex flex-col w-full bottom-10 text-xl md:text-3xl font-bold mb-8"
+    >
+      <h2 class="mb-4">What's RESETÉAME exactly?</h2>
+      <p class="text-lg md:text-xl font-base text-gray-600"
+        >Simple. Two files made to kick out your next project with the best base possible. Not need to modify anything all that You'll find here is 100% reliable. Everything you need to know about this files. </p
+      >
+    </header>
+    <div class="relative">
       <img
-        class="w-full object-cover rounded-2xl"
+        class="w-full object-cover rounded-2xl absolute top-0 bottom-4 right-0 left-0"
         src="/images/cover.webp"
         alt="screenshot pagina"
       />
-    </picture>
+    </div>
   </div>
   <div class="grid md:grid-cols-3 gap-4">
     <Card
@@ -59,19 +51,24 @@ import CardImagesReact from './CardImagesReact.astro';
 
 <style lang="scss">
   .showcase {
-    position: relative;
-    isolation: isolate;
-    margin-bottom: 10vh;
-    transform-style: preserve-3d;
-    transform: rotateX(45deg) perspective(1000px);
-    transition: all 2s ease-in-out;
-    opacity: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (width < 54em){
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+    }
+    gap: 1rem;
+    margin-bottom: 1rem;
+    background-color: hsl(0, 0%, 98%);
+    border: .5px solid hsl(0, 0%, 70%);
+    box-shadow: 2px 2px 3px hsl(0, 0%, 85%);
+    border-radius: .5rem;
+    padding: 3rem;
+    overflow: hidden;
   }
 
-  .showcase[aria-hidden='true'] {
-    transform: rotateX(0deg);
-    opacity: 1;
-  }
+ 
 
   .showcase img {
     transform: translateZ(25px);
@@ -103,6 +100,6 @@ import CardImagesReact from './CardImagesReact.astro';
     });
   });
 
-  const hiddenItem = document.querySelector('.showcase');
+  const hiddenItem = document.querySelector('.showcase') as HTMLElement;
   observer.observe(hiddenItem);
 </script>
