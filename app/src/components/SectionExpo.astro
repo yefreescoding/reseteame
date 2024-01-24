@@ -27,8 +27,9 @@ import CardImagesReact from './CardImagesReact.astro';
       />
     </div>
   </div>
-  <div class="grid md:grid-cols-3 gap-4">
-    <Card
+  <div class="grid md:grid-cols-2 gap-4">
+    <div>
+       <Card
       title="SEO optimazed"
       text="Stop worriying about this boring meta tags and focus on your work."
     >
@@ -40,12 +41,21 @@ import CardImagesReact from './CardImagesReact.astro';
     >
       <CardImagesCss />
     </Card>
-    <Card
-      title="Works with ALL"
-      text="You like Vanilla? Are you working with React? Svelt, maybe? What about Astro? Do not worry we got you cover."
-    >
-      <CardImagesReact />
-    </Card>
+    </div>
+   <div>
+     <Card
+       title="Works with ALL"
+       text="You like Vanilla? Are you working with React? Svelt, maybe? What about Astro? Do not worry we got you cover."
+     >
+       <CardImagesReact />
+     </Card>
+     <Card
+       title="Works with ALL"
+       text="You like Vanilla? Are you working with React? Svelt, maybe? What about Astro? Do not worry we got you cover."
+     >
+       <CardImagesReact />
+     </Card>
+   </div>
   </div>
 </section>
 

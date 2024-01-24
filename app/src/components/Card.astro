@@ -9,11 +9,11 @@ const { title, text, isAbsolute = false } = Astro.props;
 ---
 
 <article class:list={['card', { absolute: isAbsolute }]} aria-hidden="false">
-  <slot />
-  <div>
+  <div class="mb-8">
     <h2 class="card__h2">{title}</h2>
     <p>{text}</p>
   </div>
+  <slot />
 </article>
 
 <style lang="scss">
@@ -24,9 +24,10 @@ const { title, text, isAbsolute = false } = Astro.props;
     // background-color: var(--clr-bg);
     box-shadow: 0 0 1px var(--clr-text);
     border-radius: .5rem;
-    padding: 0.8rem;
+    padding: 1.5rem;
     border: .5px solid hsl(0, 0%, 70%);
     box-shadow: 2px 2px 3px hsl(0, 0%, 85%);
+    margin-block: 1rem;
 
     &__h2 {
       margin: 0.5rem 0;
