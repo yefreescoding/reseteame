@@ -14,45 +14,15 @@ const tagsCloud = [
 ---
 
 <section class="section">
-  <h2 class="font-bold text-3xl mb-8">Ready to use anywhere</h2>
-  <div class="section__div">
-    <article class="flex flex-col gap-4 justify-between h-full">
-      <div class="flex flex-wrap gap-2">
-        {
-          tagsCloud.map((tags) => (
-            <span class="text-center grow text-indigo-800 bg-indigo-100 py-[3px] px-[10px] rounded-full">
-              {tags}
-            </span>
-          ))
-        }
-      </div>
-      <p class="text-xl">
-        Tested in the most browsers popular browser, you don't have to worry
-        about compatibility or responsiveness.
-      </p>
-      <p class="text-xl">
-        There's no doubt this is one of the best solutions when it comes to the
-        struggle of test in different enviorments
-      </p>
-      <Links
-        text="You convince me!!"
-        href="https://github.com/yefreescoding/reseteame/tree/main/resets"
-        isFilled={true}
-        style="principal"
-        fit={true}
-      />
-    </article>
-    <div class="section__cards">
-      <Card title="Firefox" text="Latest versions of Chrome">
-        <img src="/images/firefox.webp" alt="" />
-      </Card>
-      <Card title="Safari" text="Latest versions of Chrome">
-        <img src="/images/safari.webp" alt="" />
-      </Card>
-      <Card title="Chrome 16.0.3" text="Latest versions of Chrome">
-        <img src="/images/chrome.webp" alt="" />
-      </Card>
-    </div>
+  <img class="w-[20em] -rotate-[10deg]" src="images/covers/excellent.png" alt="">
+  <h2 class="font-black text-4xl my-8 text-center">Stop reading all this and start creating your own and amazing projects!</h2>
+    <Links
+      text="Get me the files!!"
+      href="https://github.com/yefreescoding/reseteame/tree/main/resets"
+      isFilled={true}
+      style="principal"
+      fit={true}
+    />
   </div>
 </section>
 
@@ -60,59 +30,12 @@ const tagsCloud = [
   .section {
     margin: 5rem 0;
     height: fit-content;
-    &__div {
-      display: flex;
-      flex-wrap: wrap-reverse;
-      align-items: center;
-      justify-content: center;
-      height: fit-content;
-      gap: 1.5rem;
-
-      & > article {
-        flex-basis: 20em;
-        flex-grow: 1;
-        padding-right: 1.5rem;
-        @media (width < 48em) {
-          text-align: center;
-          align-items: center;
-          padding: 0;
-        }
-      }
-    }
-
-    &__cards {
-      flex-basis: 20em;
-      flex-grow: 1;
-      display: grid;
-      place-items: center;
-      position: relative;
-      height: 20em;
-      & .card {
-        text-align: left;
-        position: absolute;
-        width: 25rem;
-        transition: all 1s ease-in-out;
-        transition-delay: 0.5s;
-        @media (width < 48em) {
-          width: 15rem;
-        }
-        @for $i from 1 through 3 {
-          &:nth-child(3n + #{$i}) {
-            transform: rotate(($i * 2) + deg);
-          }
-        }
-        &:nth-child(1)[aria-hidden='true'] {
-          transform: translateX(-30%) translateY(-10%) rotate(-5deg);
-        }
-        &:nth-child(3)[aria-hidden='true'] {
-          transform: translateX(25%) translateY(10%) rotate(5deg);
-        }
-      }
-    }
+    display: grid;
+    place-items: center;
   }
 </style>
 
-<script>
+<!-- <script>
   import { observer } from '../scripts/functions';
 
   const cards = document.querySelectorAll('.card');
@@ -121,4 +44,4 @@ const tagsCloud = [
     console.log(cards);
     observer.observe(card);
   });
-</script>
+</script> -->
