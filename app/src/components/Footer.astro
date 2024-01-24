@@ -31,9 +31,14 @@
         <a href="#" class="mr-4 hover:underline md:mr-6">Support</a>
       </li>
     </ul>
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-      >© 2023 <a href="#" class="hover:underline">YefreeDevs</a>. All Rights
+    <span id="current-year" class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+      > 2023 <a href="#" class="hover:underline">YefreeDevs</a>. All Rights
       Reserved.</span
     >
   </div>
 </footer>
+
+<script>
+  const footerYear = document.getElementById('current-year') as HTMLDivElement ;
+  footerYear.innerHTML = "©" + new Date().getFullYear();
+</script>
