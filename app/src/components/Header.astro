@@ -87,18 +87,20 @@ const navLinks = [
     gap: 1rem;
     @media (width < 48em) {
       position: absolute;
-      inset: 0;
-      background-color: var(--clr-bg);
+      inset: 5rem 0 0 0;
+      // background-color: var(--clr-bg);
+      background-color: hsl(0, 0%, 100%);
+      border: 1px solid hsl(0, 0%, 75%);
+      border-radius: .4rem;
       flex-direction: column;
-      padding: 15vh 1rem;
+      padding: 5vh 1rem;
       height: fit-content;
-      // transitiosn
       transition: all 0.24s ease;
       opacity: 0;
-      transform: translateX(-100%);
+      transform: translateY(-100%);
       &[data-visible='true'] {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
       }
     }
   }
