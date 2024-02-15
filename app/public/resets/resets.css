@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  hanging-punctuation: first last;
 }
 /*
   Typographic tweaks!
@@ -39,7 +40,6 @@ select {
 text-wrap: balance;
 - Only works for the latest versions of Chrome
 */
-p,
 h1,
 h2,
 h3,
@@ -47,4 +47,17 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+}
+
+p {
+  /* Change this according to your preferences */
+  max-width: 75ch;
+  text-wrap: pretty;
+}
+
+@media (prefers-reduced-motion: no-preference){
+  :has(:target){
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
 }
