@@ -24,7 +24,7 @@ const navLinks = [
 
 <header
   id="header"
-  class="flex sticky z-10 top-4 mx-4 p-4 gap-8 items-center justify-between md:justify-start border-[0.5px] border-gray-400 bg-white shadow-sm shadow-gray-400/80 rounded-md"
+  class="max-w-[90em] flex  sticky z-10 top-1 mx-auto p-4 gap-8 items-center justify-between md:justify-start bg-gray-100 rounded-sm transition-all"
 >
   <a href="/" class="z-10 flex items-center">
     <span class="text-xl font-bold uppercase">Resets</span>
@@ -82,6 +82,12 @@ const navLinks = [
 </header>
 
 <style lang="scss" is:global>
+  #header.on_scroll_class {
+    border: 1px solid hsl(0, 0%, 80%);
+    transform: translateY(8px);
+    box-shadow: 0px 3px 5px hsl(0, 0%, 90%);
+  }
+
   .header__nav {
     display: flex;
     gap: 1rem;
@@ -126,4 +132,17 @@ const navLinks = [
       document.body.setAttribute('data-visible', 'false');
     }
   });
+
+  const header = document.getElementById("header") as HTMLElement;
+  const scrollWatcher = document.createElement("div");
+
+  scrollWatcher.setAttribute("data-scroll", "");
+
+  header.before(scrollWatcher)
+  const navObserver = new IntersectionObserver((entries)=>{
+    header.classList.toggle("on_scroll_class", !entries[0].isIntersecting)
+  });
+
+  navObserver.observe(scrollWatcher);
+
 </script>
